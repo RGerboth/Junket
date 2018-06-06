@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Junket</title>
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+
+<body class="animated bounceInDown">
+  <!-- The Modal -->
+  <div id="myModal" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p>Country Not Found</p>
+  </div>
+
+</div>
+  <div class="container">
+    <div class="row masthead">
+      <div class="col-md-12" id="header">
+        <h1 id=title>Junket</h1> 
+        <h2 id=title2>&#9888 &#9888 &#9888 Travel Safely &#9888 &#9888 &#9888</h2>
+      </div>
+    </div>
+    <br>
+    <div class="row mainBody">
+      <div class="col-md-5" id="sidebar">
+        <div class="panel panel-primary" id="entryFormPanel">
+          <div class="panel-heading">
+            <h3 class="panel-title">Add a country to your itinerary</h3>
+            <br>
+            <form>
+              <div class="form-group">
+                <input type="" class="form-control" id="button-input">
+              </div>
+              <button type="submit" class="btn btn-default" id="add-button">
+                Submit
+              </button>
+            </form>
+            <br>
+          </div>
+          <div id="map">
+          </div>
+          <div class="itineraryHeader">
+            <h2>Itinerary</h2>
+          </div>
+          <table class="itinerary">
+          </table>
+        </div>
+      </div>
+        <div class="col-md-7 detailWindow">
+          <div class="panel panel-primary">
+            <div class="panel-heading">
+              <h3 class="panel-title">Destination Details</h3>
+            </div>
+          <div class="panel-body details">
+            <div style="margin-top:5px">
+                <div id="advice">
+                  <h2>Welcome to Junket!</h2>
+                  <section id="introduction">
+                    <p>This is <b>the</b> premiere travel safety planning site available today. Here you can:</p>
+                      <ul>
+                        <li>Get instant, at-a-glance country safety ratings with travel recommendations</li>
+                        <li>Research country-specific emergency responder phone numbers</li>
+                        <li>Note the closest American embassy or consulate</li>
+                        <li>Access the latest State Department traveler information for each country</li>
+                        <li>Read up on generic country background, powered by Wikipedia</li>
+                      </ul>
+                    <p id="instructions">Simply enter a desired destination country to add it to your itinerary, then click on the country button to see more detail. </p>
+                  </section>
+                </div>
+                <button class="accordion">Emergency Phone Numbers</button>
+                <div class="panelaccord">
+                  <div id="112"></div>
+                  <div id="fire"></div>
+                  <div id="police"></div>
+                  <div id="ambulance"></div>
+                  <div id="dispatch"></div>
+                </div>   
+                    <button class="accordion">Embassy Address</button>
+                      <div class="panelaccord">
+                        <div id="embassy"></div>
+                      </div>                    
+                    <button class="accordion">Travel and Transportation</button>
+                      <div class="panelaccord">
+                        <div id="travel"></div>
+                      </div>                  
+                    <button class="accordion">Health</button>
+                      <div class="panelaccord">
+                        <div id="health"></div>
+                      </div>                  
+                    <button class="accordion">Local Laws</button>
+                      <div class="panelaccord">
+                        <div id="laws"></div>
+                      </div>                  
+                    <button class="accordion">Safety and Security</button>
+                      <div class="panelaccord">
+                        <div id="safety"></div>
+                      </div>                  
+                    <button class="accordion">Entry and Exit</button>
+                      <div class="panelaccord">
+                        <div id="entryexit"></div>
+                      </div>                  
+                    <button class="accordion">Country Description</button>
+                      <div class="panelaccord">
+                        <div id="description"></div>
+                      </div>                 
+                </div>
+                <button class="accordion">Wikipedia Article</button>
+                <div class="panelaccord">
+                  <div id = "wiki"></div>
+                </div>
+          </div>
+        </div>
+       </div>
+    </div>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/4.9.1/firebase.js"></script>
+
+    <script type="text/javascript" src="javascript/ISOCountryCode.js"></script>
+    
+    <script type="text/javascript" src="javascript/consular.js"></script>
+    
+    <script type="text/javascript" src="javascript/emergencynumber.js"></script>
+
+    <script type="text/javascript" src="javascript/alerts.js"></script>
+    
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA3o7dy50LdekZi5WmxFMHbVK690D3KeKQ&region=ES&callback=initMap"></script>
+    
+    <script type="text/javascript" src="javascript/junket.js"></script>
+
+</body>
+</html>
